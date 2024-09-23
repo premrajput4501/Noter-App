@@ -9,13 +9,12 @@ html {
 }
 
 body {
-  background: #eee;
-  padding: 0 16px;
+  background: #e6e6e6;
 }
 
 header {
   background-color: #f5ba13;
-  margin: auto -16px;
+  /* margin: auto -16px; */
   padding: 16px 32px;
   box-shadow: 0 0 0px 2px rgb(0, 0, 0);
 }
@@ -32,13 +31,15 @@ header h1 {
 
 header h1:hover{
   cursor: pointer;
-  transform: scale(1.15) rotate(2deg);
+  transform: scale(1.15) rotate(1deg);
 }
 
 footer {
+  background-color: #ffbb0097;
   display: block;
+  position: fixed;
   width: 100%;
-  margin-top: 10%;
+  padding: 5px;
   text-align: center;
   bottom: 0px;
 }
@@ -47,33 +48,39 @@ footer p {
   color: #2e2e2e;
 }
 
-.note {
+.note{
   display: inline-block;
+  
   background: #fff;
   border-radius: 7px;
   box-shadow: 0 2px 5px #ccc;
   padding: 40px 40px;
-  width: fit-content;
+  width: 300px;
   margin: 30px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
   /* height: auto; */
   /* float: left; */
   transition: transform 0.2s;
+  top: 0px;
 }
 
 .note:hover{
-  background: linear-gradient(300deg, rgb(239, 239, 239), rgb(255, 255, 255), rgb(255, 255, 255));
+  background: linear-gradient(220deg, rgb(239, 239, 239), rgb(255, 255, 255), rgb(255, 255, 255));
   transform: scale(1.03);
 }
 
 .note h1 {
-  font-size: 1.1em;
-  margin-bottom: 6px;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  font-size: 14pt;
+  margin: 10px;
 }
 
 .note p {
-  width: 100%;
-  font-size: 1.1em;
-  margin-bottom: 10px;
+  /* width: 100%; */
+  font-size: 12pt;
+  margin: 10px;
   white-space: pre-wrap;
   word-wrap: break-word;
 }
@@ -110,7 +117,7 @@ footer p {
 
 form {
   position: relative;
-  width: 480px;
+  width: 550px;
   margin: 30px auto 20px auto;
   background: #fff;
   padding: 15px;
@@ -120,7 +127,7 @@ form {
 }
 
 form:hover{
-  background: linear-gradient(220deg, rgb(206, 206, 206), rgb(245, 245, 245), rgb(255, 255, 255));
+  background: linear-gradient(220deg, rgb(226, 226, 226), rgb(245, 245, 245), rgb(255, 255, 255));
   transform: scale(1.05);
 }
 
@@ -131,9 +138,14 @@ form textarea {
   padding: 4px;
   background-color: transparent;
   outline: none;
-  font-size: 1.2em;
+  font-size: 12pt;
   font-family: inherit;
   resize: none;
+}
+
+form input{
+  font-size: 14pt;
+  font-weight: 700;
 }
 
 form button {
@@ -160,4 +172,29 @@ form button:active{
 
 form button:hover{
   background: #bb8d0f;
+}
+
+@media(max-width:768px){
+
+  header, header h1{
+    width: auto;
+  }
+
+  form{
+    margin: 20px;
+    width: auto;
+  }
+
+  .note{
+    padding: 20px 20px;
+  }
+
+  .note h1{
+    font-size: 12pt;
+  }
+
+  .note p{
+    font-size: 10pt;
+  }
+
 }
