@@ -50,7 +50,6 @@ footer p {
 
 .note{
   display: inline-block;
-  
   background: #fff;
   border-radius: 7px;
   box-shadow: 0 2px 5px #ccc;
@@ -59,8 +58,6 @@ footer p {
   margin: 30px;
   white-space: pre-wrap;
   word-wrap: break-word;
-  /* height: auto; */
-  /* float: left; */
   transition: transform 0.2s;
   top: 0px;
 }
@@ -88,6 +85,7 @@ footer p {
 .note .time-created{
   color: #4d4d4dc6;
   font-size: 8pt;
+  /* margin: 5px; */
 }
 
 .note button {
@@ -104,6 +102,7 @@ footer p {
   outline: none;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.426);
   transition: all 0.05s;
+  user-select: none;
 }
 
 .note button:hover{
@@ -163,6 +162,7 @@ form button {
   cursor: pointer;
   outline: none;
   transition: transform 0.05s;
+  user-select: none;
 }
 
 form button:active{
@@ -178,6 +178,12 @@ form button:hover{
 
   header, header h1{
     width: auto;
+    user-select: none;
+  }
+
+  header h1:hover{
+    cursor: pointer;
+    transform: scale(1.05) rotate(1deg);
   }
 
   form{
